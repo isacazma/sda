@@ -1,4 +1,4 @@
-package nl.hu.bep2.casino.hetSpelBlackjack;
+package nl.hu.bep2.casino.hetSpelBlackjack.domain;
 
 import java.util.ArrayList;
 import java.util.List;

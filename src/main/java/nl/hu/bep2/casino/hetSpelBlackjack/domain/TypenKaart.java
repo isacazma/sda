@@ -1,4 +1,4 @@
-package nl.hu.bep2.casino.hetSpelBlackjack;
+package nl.hu.bep2.casino.hetSpelBlackjack.domain;
 
 public enum TypenKaart {
     klaveren , //zwart

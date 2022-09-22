@@ -1,14 +1,11 @@
 package nl.hu.bep2.casino.Factories;
 
-import nl.hu.bep2.casino.hetSpelBlackjack.Card;
-import nl.hu.bep2.casino.hetSpelBlackjack.Deck;
-import nl.hu.bep2.casino.hetSpelBlackjack.TypenKaart;
-import nl.hu.bep2.casino.hetSpelBlackjack.WaardeKaart;
+import nl.hu.bep2.casino.hetSpelBlackjack.domain.Card;
+import nl.hu.bep2.casino.hetSpelBlackjack.domain.Deck;
+import nl.hu.bep2.casino.hetSpelBlackjack.domain.TypenKaart;
+import nl.hu.bep2.casino.hetSpelBlackjack.domain.WaardeKaart;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 public class DeckFactory {
 
