@@ -1,7 +1,7 @@
 package nl.hu.bep2.casino;
 
-import nl.hu.bep2.casino.Factories.DeckFactory;
-import nl.hu.bep2.casino.hetSpelBlackjack.domain.Deck;
+import nl.hu.bep2.casino.blackJackGame.presentation.DeckFactory;
+import nl.hu.bep2.casino.blackJackGame.domain.blackJackDeck.Deck;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;

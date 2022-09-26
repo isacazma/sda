@@ -1,8 +1,8 @@
-package nl.hu.bep2.casino.hetSpelBlackjack.presentation.dto;
+package nl.hu.bep2.casino.blackJackGame.presentation.dto;
 
 import javax.validation.constraints.Positive;
 
-public class DepositGame {
+public class PotGame {
     @Positive
     public Long betAmount;
 }

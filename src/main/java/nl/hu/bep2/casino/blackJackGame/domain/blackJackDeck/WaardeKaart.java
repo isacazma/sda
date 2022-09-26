@@ -1,4 +1,4 @@
-package nl.hu.bep2.casino.hetSpelBlackjack.domain;
+package nl.hu.bep2.casino.blackJackGame.domain.blackJackDeck;
 
 public enum WaardeKaart {
     Twee(2),

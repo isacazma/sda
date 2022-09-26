@@ -1,9 +1,9 @@
-package nl.hu.bep2.casino.Factories;
+package nl.hu.bep2.casino.blackJackGame.presentation;
 
-import nl.hu.bep2.casino.hetSpelBlackjack.domain.Card;
-import nl.hu.bep2.casino.hetSpelBlackjack.domain.Deck;
-import nl.hu.bep2.casino.hetSpelBlackjack.domain.TypenKaart;
-import nl.hu.bep2.casino.hetSpelBlackjack.domain.WaardeKaart;
+import nl.hu.bep2.casino.blackJackGame.domain.blackJackDeck.Card;
+import nl.hu.bep2.casino.blackJackGame.domain.blackJackDeck.Deck;
+import nl.hu.bep2.casino.blackJackGame.domain.blackJackDeck.TypenKaart;
+import nl.hu.bep2.casino.blackJackGame.domain.blackJackDeck.WaardeKaart;
 
 import java.util.Collections;
 

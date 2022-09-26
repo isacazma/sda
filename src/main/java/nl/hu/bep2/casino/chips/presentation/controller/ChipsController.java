@@ -34,8 +34,10 @@ public class ChipsController {
     public Balance deposit(Authentication authentication, @Validated @RequestBody Deposit deposit) {
         UserProfile profile = (UserProfile) authentication.getPrincipal();
 
+            System.out.println(deposit.amount);
         try {
             Balance balance = this.service.depositChips(profile.getUsername(), deposit.amount);
+
             return balance;
         } catch (NegativeNumberException exception) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, exception.getMessage());

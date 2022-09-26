@@ -1,10 +1,10 @@
-package nl.hu.bep2.casino.hetSpelBlackjack.presentation.view;
+package nl.hu.bep2.casino.blackJackGame.domain.factories;
 
-import nl.hu.bep2.casino.hetSpelBlackjack.domain.Game.State;
-import nl.hu.bep2.casino.hetSpelBlackjack.domain.Hand;
+import nl.hu.bep2.casino.blackJackGame.domain.State;
+import nl.hu.bep2.casino.blackJackGame.domain.blackJackDeck.Hand;
 
 public class GameView {
-    public nl.hu.bep2.casino.hetSpelBlackjack.domain.Game.State State;
+    public State State;
     public Hand playerHand;
     public Hand dealerHand;
 

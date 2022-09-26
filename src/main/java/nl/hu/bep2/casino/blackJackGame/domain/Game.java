@@ -1,33 +1,38 @@
-package nl.hu.bep2.casino.hetSpelBlackjack.domain.Game;
+package nl.hu.bep2.casino.blackJackGame.domain;
 
 
-import nl.hu.bep2.casino.hetSpelBlackjack.domain.Dealer;
-import nl.hu.bep2.casino.hetSpelBlackjack.domain.Deck;
-import nl.hu.bep2.casino.hetSpelBlackjack.domain.Player;
-import nl.hu.bep2.casino.hetSpelBlackjack.presentation.dto.DepositGame;
+import nl.hu.bep2.casino.blackJackGame.domain.blackJackDeck.Deck;
+import nl.hu.bep2.casino.blackJackGame.presentation.dto.PotGame;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name ="blackJackTable")
 
 public class Game {
-    private Deck deck;
+    @OneToOne()
+    @JoinColumn(name = "player")
     private Player player;
+    @OneToOne()
+    @JoinColumn(name = "dealer")
     private Dealer dealer;
-    private DepositGame pot;
-    private State state = State.STARTGAME;
 
-    public Game(Deck pile, Player player, Dealer dealer, DepositGame pot) {
-        this.deck = pile;
+    private State state = State.STARTGAME;
+    @Id
+    @GeneratedValue
+    private Long id;
+
+
+    public Game( Player player, Dealer dealer) {
         this.player = player;
         this.dealer = dealer;
-
     }
 
-    public Deck getDeck() {
-        return deck;
+    public Game() {
     }
 
-    public void setDeck(Deck deck) {
-        this.deck = deck;
-    }
+
+
 
     public Player getPlayer() {
         return player;
@@ -45,14 +50,6 @@ public class Game {
         this.dealer = dealer;
     }
 
-    public DepositGame getPot() {
-        return pot;
-    }
-
-    public void setPot(DepositGame pot) {
-        this.pot = pot;
-    }
-
     public State getState() {
         return state;
     }
@@ -64,10 +61,10 @@ public class Game {
     @Override
     public String toString() {
         return "Game{" +
-                "pile=" + deck +
+
                 ", player='" + player + '\'' +
                 ", dealer='" + dealer + '\'' +
-                ", pot=" + pot +
+
                 '}';
     }
 }
