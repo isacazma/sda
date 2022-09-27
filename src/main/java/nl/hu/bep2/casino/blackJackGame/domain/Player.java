@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 public class Player implements Person {
     @Id
-    @Column(name = "id", nullable = false)
+    @GeneratedValue
     private Long id;
 
     @OneToOne

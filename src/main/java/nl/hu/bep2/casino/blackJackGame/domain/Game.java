@@ -10,6 +10,12 @@ import javax.persistence.*;
 @Table(name ="blackJackTable")
 
 public class Game {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+
     @OneToOne()
     @JoinColumn(name = "player")
     private Player player;
@@ -18,9 +24,7 @@ public class Game {
     private Dealer dealer;
 
     private State state = State.STARTGAME;
-    @Id
-    @GeneratedValue
-    private Long id;
+
 
 
     public Game( Player player, Dealer dealer) {
@@ -28,11 +32,17 @@ public class Game {
         this.dealer = dealer;
     }
 
+
     public Game() {
     }
 
+    public Long getId() {
+        return id;
+    }
 
-
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Player getPlayer() {
         return player;

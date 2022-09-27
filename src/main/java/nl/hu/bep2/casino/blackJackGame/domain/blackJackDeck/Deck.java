@@ -1,28 +1,21 @@
 package nl.hu.bep2.casino.blackJackGame.domain.blackJackDeck;
 
+import nl.hu.bep2.casino.blackJackGame.application.DeckFactory;
 import nl.hu.bep2.casino.blackJackGame.domain.blackJackDeck.Card;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-public class Deck {
-    @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
-    @OneToMany
-    private List<Card>cards = new ArrayList<Card>();
 
-private int teller = 0;
+public class Deck implements Serializable {
+    public List<Card>cards = new ArrayList<Card>();
 
-    public Long getId() {
-        return id;
+    public Deck(){
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private int teller = 0;
 
     public Card getEenCard(){
     teller ++;
@@ -30,6 +23,17 @@ private int teller = 0;
 }
 
 
+    public void setCards(List<Card> cards) {
+        this.cards = cards;
+    }
+
+    public int getTeller() {
+        return teller;
+    }
+
+    public void setTeller(int teller) {
+        this.teller = teller;
+    }
 
     public void addCard(Card kaart){
         cards.add(kaart);
